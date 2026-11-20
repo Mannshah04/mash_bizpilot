@@ -1,0 +1,42 @@
+@layer base {
+  body {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+  }
+}
+
+@layer utilities {
+  /* Override dark slate backgrounds with light equivalents */
+  .bg-slate-950 { @apply bg-white; }
+  .bg-slate-950\/60 { @apply bg-white/60; }
+  .bg-slate-950\/80 { @apply bg-white/80; }
+  .bg-slate-900 { @apply bg-gray-50; }
+  .bg-slate-900\/60 { @apply bg-gray-50/60; }
+  .bg-slate-900\/80 { @apply bg-gray-50/80; }
+  .bg-slate-850 { @apply bg-gray-100; }
+
+  /* Text color overrides */
+  .text-slate-100, .text-slate-300, .text-slate-400, .text-slate-500, .text-slate-600, .text-slate-700 { @apply text-gray-800; }
+  .text-slate-900 { @apply text-gray-900; }
+
+  /* Border overrides */
+  .border-slate-900, .border-slate-800, .border-slate-700 { @apply border-gray-200; }
+
+  /* Card style */
+  .premium-card {
+    @apply bg-white rounded-xl shadow-md border border-gray-200 p-6 transition-transform duration-200 ease-out hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Button style */
+  .premium-btn {
+    @apply bg-indigo-600 text-white font-medium py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-colors duration-200;
+  }
+
+  /* Input style */
+  .premium-input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2;
+  }
+
+  /* Smooth transitions for all elements */
+  * { @apply transition-all duration-200; }
+}
